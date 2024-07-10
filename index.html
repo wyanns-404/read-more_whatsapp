@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembuat Teks 'Read More' WhatsApp Chat</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Pembuat Teks 'Read More' WhatsApp Chat</h1>
+        <p class="text-center">Situs ini memungkinkan Anda untuk membuat tulisan baca selengkapnya di WA tanpa aplikasi.</p>
+        <form id="readMoreForm" class="mb-4">
+            <div class="form-group">
+                <label for="firstWord">Kata Pertama:</label>
+                <input type="text" class="form-control" id="firstWord" name="firstWord" required>
+            </div>
+            <div class="form-group">
+                <label for="secondWord">Kata Kedua:</label>
+                <input type="text" class="form-control" id="secondWord" name="secondWord" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="generateText()">Buat</button>
+        </form>
+        <div id="resultContainer" class="d-none">
+            <h2 class="text-center">Hasil:</h2>
+            <div class="form-group">
+                <textarea id="resultText" class="form-control" rows="5" readonly></textarea>
+            </div>
+            <button class="btn btn-success" onclick="copyToClipboard()">Salin</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
